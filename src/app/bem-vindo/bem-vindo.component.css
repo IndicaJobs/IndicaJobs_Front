@@ -1,0 +1,96 @@
+#logarBotao{
+  border-color: 5px black;
+}
+
+.logo{
+  width: 600px;
+
+}
+
+
+.container-welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 150px;
+}
+.container-welcome h1{
+  padding-top: 100px;
+  font-weight: bold;
+  color: #4e87a4;
+
+}
+.container-welcome p{
+  font-style: italic;
+}
+
+.row-texto{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg{
+  background-color: #6F1E51;
+  border-radius: 5px 5px 0 0;
+
+}
+
+.text{
+  color: white;
+}
+
+.col-md-4{
+  color: darkgray;
+}
+
+a{
+  color:darkgrey ;
+}
+
+#linha-horizontal {
+  width: auto;  
+  border-radius: 5px;
+  padding: 1px;
+  background: #FFFFFF;
+  border: 1px solid #1289A7;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+/* Configurações dos ícones*/
+
+.navbar-icon-top .navbar-nav .nav-link > .fa {
+  position: relative;
+  width: 25px;
+  font-size: 22px;
+  color: #6F1E51;
+  top: 0;
+  line-height: 12px;
+}
+
+@media (min-width: 992px) {
+  .navbar-icon-top.navbar-expand-lg .navbar-nav .nav-link {
+    text-align: center;
+    display: table-cell;
+    height: 70px;
+    vertical-align: middle;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 15px;
+    color: #6F1E51;
+  }
+
+  .navbar-icon-top.navbar-expand-lg .navbar-nav .nav-link > .fa {
+    display: block;
+    width: 30px;
+    margin: auto auto 2px auto;
+    top: 0;
+    line-height: 24px;
+  }
+
+}
+
+
+/* /Configuração dos ícones */ 

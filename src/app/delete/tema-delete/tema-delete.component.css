@@ -1,0 +1,28 @@
+.bg{
+    background-color: #F1F2F6;
+}
+
+
+.hb:hover{
+    background-color: #1289A7;
+  }
+  
+  .hr:hover{
+    background-color: crimson;
+  }
+
+  .fs-54{
+    font-size: 54pt;
+    color:#6F1E51;
+  }
+  
+  .fs-18{
+    font-size: 18pt;
+    color:#6F1E51;
+  
+  }
+
+  .fs-12{
+      font-size: 12pt;
+      color:#6F1E51;
+  }

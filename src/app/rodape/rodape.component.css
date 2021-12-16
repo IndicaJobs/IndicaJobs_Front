@@ -1,0 +1,24 @@
+.bg{
+    background-color: #6F1E51;
+    border-radius: 5px 5px 0 0;
+    
+}
+
+.text{
+    color: white;
+}
+
+.col-md-4{
+    color: darkgray;
+}
+
+a{
+    color:darkgrey ;
+}
+
+#linha-horizontal {
+    width: auto;   
+    border: 1px solid #1289A7;
+    border-radius: 5px 5px 0 0;
+    padding: 5px;
+}

@@ -1,0 +1,125 @@
+<div class="container-flex">
+<button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+  <mat-icon *ngIf="!sidenav.opened">
+    menu
+  </mat-icon>
+  <mat-icon *ngIf="sidenav.opened">
+    close
+  </mat-icon>
+</button>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z4 d-flex justify-content-center" mode="side" opened>
+
+    <div class="col-md-12" id="linhaVertical">
+    </div>
+
+    <img class="avatar mat-elevation-z8" src="{{foto}}" />
+
+    <h4 class="name">{{nome}}</h4>
+
+    <mat-divider></mat-divider>
+    <p class="designation">Bio:</p>
+
+    <mat-divider></mat-divider>
+
+
+
+    <button mat-button class="menu-button">
+      <mat-icon>star_border</mat-icon>
+      <span>Pontos por Indicação</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon>work</mat-icon>
+      <span>Empresa</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon>calendar_today</mat-icon>
+      <span>Nascimento</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon> location_on</mat-icon>
+      <span>São Paulo</span>
+    </button>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z4">
+      <div class="row">
+        <div class="button col-md-12">
+          <button id="line" class="btn-Post" data-target="#novaPostagem" data-toggle="modal" type="button"><i
+              class="far fa-paper-plane"></i></button>
+        </div>
+      </div>
+      <div class="tab-content mt-5" id="nav-tabContent">
+
+        <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel"
+          aria-labelledby="nav-todasPostagens-tab">
+
+          <div class="card-columns">
+            <div class="card text-center" *ngFor="let item of listaPostagens">
+              <div class="card-body">
+                <h5 class="card-title m-0">{{item.tituloPost}}</h5>
+                <small class="text-muted">Tema: {{item.tema.descricaoTema}}</small>
+                <p class="card-text mt-3">{{item.textoPost}}</p>
+                <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data
+                    | date: 'HH:mm'}}</small></p>
+                <p class="card-text"><small class="text-muted"> by: {{item.usuario.nome}}</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+
+
+<!-- Modal -->
+<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true">
+
+  <div class="modal-dialog modal-dialog-centered" role="document">
+
+    <div class="modal-content bg">
+
+      <div class="modal-header">
+
+        <h5 class="modal-title txt" id="TituloModalCentralizado">Nova Postagem</h5>
+        <button type="button" data-target="novaPostagem" data-toggle="modal" class="close" data-dismiss="modal"
+          aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-group txt">
+          <label for="titulo">Título</label>
+          <input [(ngModel)]="postagem.tituloPost" type="text" class="form-control" id="titulo"
+            placeholder="Digite o título">
+        </div>
+
+        <div class="form-group txt">
+          <label for="texto">Texto</label>
+          <textarea [(ngModel)]="postagem.textoPost" name="texto" id="texto" rows="3" class="form-control"></textarea>
+        </div>
+
+        <div class="form-group txt">
+          <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink="/tema">cadastre um
+              novo</a>:</label>
+          <select [(ngModel)]="idTema" name="tema" id="tema" class="form-control" (change)="findByIdTema">
+            <option *ngFor="let item of listaTemas" value="{{item.idTema}}">
+              {{item.descricaoTema}}
+            </option>
+          </select>
+        </div>
+
+      </div>
+      <div class="modal-footer txt">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success" (click)="publicar()" data-dismiss="modal">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
