@@ -2,6 +2,46 @@ mat-toolbar {
   color: #6F1E51E5
 }
 
+.borda{
+  border: 1px solid #1289A7;
+  background-color: #F1F2F6;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.borda-2{
+  border-top: 1px solid #1289A7;
+  border-bottom: 1px solid #1289A7;
+}
+
+.borda-b{
+  border: 1px solid #6F1E51;
+  background-color: #F1F2F6;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.modal-title{
+  color: #6F1E51;
+  font-size: 20pt;
+  padding-top: 10px;
+}
+
+.txt{
+  color: #6F1E51;
+  font-size: 12pt;
+}
+
+.hb:hover{
+  background-color: #1289A7;
+  color: #ffffff ;
+}
+
+.hr:hover{
+  background-color: crimson;
+  color: #ffffff;
+}
+
 mat-sidenav {
 margin: 16px;
 position: absolute;

@@ -1,35 +1,37 @@
-<div class="container-fluid bg">
-    <div class="row">
+<div class="bg">
+    <div class="container-fluid">
+        <div class="row">
 
-        <div class="col-md-12 mt-5 mb-5">
-            <h1 class="text-center txt fs-54">Atualizar Tema</h1>
+            <div class="col-md-12 mt-5 mb-5">
+                <h1 class="text-center f-54">Atualizar Tema</h1>
+            </div>
         </div>
-    </div>
 
-    <div class="row d-flex justify-content-center">
-        <div class="col-md-4">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-3 linha mb-5">
 
-            <div class="form-group">
-                <label for="descricao">Título do Tema:</label>
-                <input type="text" class="form-control" id="descricao" [(ngModel)]="tema.tituloTema">
-            </div>
+                <div class="form-group">
+                    <label for="descricao">Título do Tema:</label>
+                    <input type="text" class="form-control borda" id="descricao" [(ngModel)]="tema.tituloTema">
+                </div>
 
-            <div class="form-group">
-                <label for="descricao">Descrição do Tema:</label>
-                <textarea type="text" class="form-control" id="descricao" [(ngModel)]="tema.descricaoTema"></textarea>
-            </div>
+                <div class="form-group">
+                    <label for="descricao">Descrição do Tema:</label>
+                    <textarea type="text" class="form-control borda" id="descricao"
+                        [(ngModel)]="tema.descricaoTema"></textarea>
+                </div>
 
-            <div class="form-group">
-                <label for="descricao">Palavra Chave:</label>
-                <input type="text" class="form-control" id="descricao" [(ngModel)]="tema.palavraChave">
-            </div>
+                <div class="form-group">
+                    <label for="descricao">Palavra Chave:</label>
+                    <input type="text" class="form-control borda" id="descricao" [(ngModel)]="tema.palavraChave">
+                </div>
 
 
-            <div class="d-flex justify-content-center mb-4">
-                <button class="btn btn-outline-dark mr-4 hr" routerLink="/tema">Cancelar</button>
-                <button class="btn btn-outline-dark hb" (click)="atualizar()">Atualizar</button>
+                <div class="d-flex justify-content-center">
+                    <button class="btn hr borda-b txt mr-4" routerLink="/tema">Cancelar</button>
+                    <button class="btn hb borda-b txt" (click)="atualizar()">Atualizar</button>
+                </div>
             </div>
         </div>
     </div>
 </div>
-

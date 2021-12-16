@@ -81,43 +81,43 @@
 
     <div class="modal-dialog modal-dialog-centered" role="document">
 
-      <div class="modal-content bg">
+      <div class="modal-content borda">
 
-        <div class="modal-header">
+        <div class="modal-header ">
 
-          <h5 class="modal-title txt" id="TituloModalCentralizado">Nova Postagem</h5>
+          <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
           <button type="button" data-target="novaPostagem" data-toggle="modal" class="close" data-dismiss="modal"
             aria-label="Fechar">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
 
-        <div class="modal-body">
+        <div class="modal-body borda-2">
           <div class="form-group txt">
-            <label for="titulo">Título</label>
-            <input [(ngModel)]="postagem.tituloPost" type="text" class="form-control" id="titulo"
+            <label for="titulo">Título:</label>
+            <input [(ngModel)]="postagem.tituloPost" type="text" class="form-control borda" id="titulo"
               placeholder="Digite o título">
           </div>
 
           <div class="form-group txt">
-            <label for="texto">Texto</label>
-            <textarea [(ngModel)]="postagem.textoPost" name="texto" id="texto" rows="3" class="form-control"></textarea>
+            <label for="texto">Texto:</label>
+            <textarea  [(ngModel)]="postagem.textoPost" name="texto" id="texto" rows="3" class="form-control borda" placeholder="Digite sua mensagem"></textarea>
           </div>
 
           <div class="form-group txt">
             <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink="/tema">cadastre um
                 novo</a>:</label>
-            <select [(ngModel)]="idTema" name="tema" id="tema" class="form-control" (change)="findByIdTema">
-              <option *ngFor="let item of listaTemas" value="{{item.idTema}}">
-                {{item.descricaoTema}}
+            <select [(ngModel)]="idTema" name="tema" id="tema" class="form-control borda"(change)="findByIdTema">
+              <option *ngFor="let item of listaTemas" value="{{item.idTema}}" >
+                {{item.tituloTema}}
               </option>
             </select>
           </div>
 
         </div>
         <div class="modal-footer txt">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-success" (click)="publicar()" data-dismiss="modal">Publicar</button>
+          <button type="button" class="btn hr borda-b txt  mr-4" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn hb borda-b txt" (click)="publicar()" data-dismiss="modal">Publicar</button>
         </div>
       </div>
     </div>
