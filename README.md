@@ -9,8 +9,7 @@
 ## 💻 Sobre o projeto
 
 O IndicaJob's foi criado para ser apresentado como Projeto Final de grupo da Turma-35 do Curso Bootcamp para Desenvolvedores Web Full Stack Java da ONG Generation Brasil.
-Com o objetivo de apresentar soluções técnológicas para alcançar a ODS 8 da ONU: Trabalho Decente e Crescimento Ecônomico.
-A idéia por trás do Projeto é criar uma rede social que consiga unir Empresas que possuam vagas e usuários que possam ser indicados ou que indiquem outros usuários para essas vagas, por meio de postagens.
+Com o intuito de apresentar soluções tecnológicas para alcançar o objetivo da ODS 8 da ONU: Trabalho Decente e Crescimento Ecônomico. A idéia por trás do Projeto é criar uma rede social que consiga unir Empresas que possuam vagas e usuários que possam ser indicados ou que indiquem outros usuários para essas vagas, por meio de postagens.
 
 ---
 
