@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600&display=swap');
+
 #logarBotao{
   border-color: 5px black;
 }
@@ -13,17 +15,29 @@
   align-items: center;
   justify-content: center;
   padding: 150px;
+  border-bottom: 1px solid #1289A7;
+  background-color: #F1F2F6;
+
 }
 .container-welcome h1{
   padding-top: 100px;
-  font-weight: bold;
+  font-weight: 600pt;
+  font-size: 54px;
+  text-align: center;
+  line-height: 50px;
+  padding-top: 50px;
   color: #4e87a4;
-
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 .container-welcome p{
   font-style: italic;
+  font-size: 24px;
+  text-align: center;
+  color: #6F1E51;
 }
-
+#welcome{
+  padding-right: 100px;
+}
 .row-texto{
   display: flex;
   align-items: center;
@@ -91,6 +105,44 @@ a{
   }
 
 }
+.container-sobreNos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: #FFFFFF;
+}
+#textSobre {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 
+}
 
+.container-sobreNos p {
+  text-align: justify;
+  font-size: 24px;
+  line-height: 30px;
+  color: #6F1E51;
+}
+#sobre{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-sobreNos h1{
+  color: #1289A7;
+  font-size: 54pt;
+  font-family: 'Montserrat Alternates', sans-serif;
+
+}
+.container-equipe {
+  display: flex;
+  justify-content: center;
+}
+
+.box{
+  display: inline-block;
+  
+}
 /* /Configuração dos ícones */
