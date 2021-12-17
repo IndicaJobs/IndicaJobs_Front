@@ -1,7 +1,6 @@
-
 <nav class="navbar navbar-icon-top navbar-expand-lg navbar-light bg-light" id="linha-horizontal">
-    <div class="container" >
-        <img class = "mr-4" src="../../assets/img/logo-nav-bar.png" alt="logo" width="180">
+    <div class="container">
+        <img class="mr-4" src="../../assets/img/logo-nav-bar.png" alt="logo" width="180">
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,7 +27,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" routerLink="/inicio">
                         <i class="fas fa-building"></i>
                         Empresas
                     </a>
@@ -43,10 +42,8 @@
                         {{nome}}
                     </a>
                     <div class="dropdown-menu dp ml-0" id="dropdown" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-user-edit"></i>
-                            Editar perfil
-                        </a>
+                        <a [routerLink]="['/usuario-edit', idUsuario]" class="dropdown-item"><i
+                                class="fa fa-user-edit"></i>Editar perfil</a>
                         <div class="dropdown-divider"></div>
                         <button class="dropdown-item" (click)="sair()">
                             <i class="fa fa-sign-out-alt mr-2"></i>
