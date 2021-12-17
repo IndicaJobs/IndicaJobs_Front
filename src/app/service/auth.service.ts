@@ -1,5 +1,5 @@
 import { environment } from './../../environments/environment.prod';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -10,6 +10,10 @@ import { UsuarioLogin } from '../model/UsuarioLogin';
   providedIn: 'root'
 })
 export class AuthService {
+
+  token = {
+    headers: new HttpHeaders().set('Authorization', environment.token)
+  }
 
   constructor(
     private http: HttpClient
@@ -24,6 +28,10 @@ export class AuthService {
   }
   getByIdUsuario(idUsuario: number):Observable<Usuario>{
     return this.http.get<Usuario>(`https://indicajobs.herokuapp.com/usuarios/${idUsuario}` )
+  }
+
+  putUsuario(usuario: Usuario): Observable<Usuario> {
+    return this.http.put<Usuario>('https://indicajobs.herokuapp.com/usuarios/atualizar', usuario)
   }
   
   logado(){

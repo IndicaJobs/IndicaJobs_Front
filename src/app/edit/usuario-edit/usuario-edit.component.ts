@@ -28,7 +28,7 @@ export class UsuarioEditComponent implements OnInit {
     window.scroll(0,0)
 
     if(environment.token == ''){
-      this.router.navigate(['/entrar'])
+      this.router.navigate(['/bem-vindo'])
       }
 
       this.idUsuario = this.route.snapshot.params['idUsuario']
@@ -49,10 +49,17 @@ export class UsuarioEditComponent implements OnInit {
     if(this.usuario.senha != this.confirmarSenha){
       alert('As senhas estão incorretas.')
     } else {
-      this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
+      this.authService.putUsuario(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp 
-        this.router.navigate(['/inicio'])     
-        alert('Usuário cadastrado com sucesso!')
+        this.router.navigate(['/login-cadastro'])     
+        alert('Usuário atualizado com sucesso, faça o login novamente!')
+
+        environment.token = ''
+        environment.nome = ''
+        environment.foto = ''     
+        environment.idUsuario = 0
+
+        this.router.navigate(['/login-cadastrar'])
       })
     }
   }
