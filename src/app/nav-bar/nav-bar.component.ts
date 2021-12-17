@@ -12,6 +12,7 @@ export class NavBarComponent implements OnInit {
 
   nome = environment.nome;
   foto = environment.foto;
+  idUsuario = environment.idUsuario; 
 
   constructor(
     public router: Router
