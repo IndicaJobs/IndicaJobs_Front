@@ -1,7 +1,14 @@
-mat-toolbar {
-  color: #6F1E51E5
-}
 
+body{
+
+  background-color: #F1F2F6;
+
+}
+.container-fluid{
+  display: flex;
+  justify-content: center;
+
+}
 .borda{
   border: 1px solid #1289A7;
   background-color: #F1F2F6;
@@ -43,8 +50,8 @@ mat-toolbar {
 }
 
 mat-sidenav {
-margin: 16px;
-position: absolute;
+margin-top: 26px;
+position:absolute;
 width: 300px;
 height: 705px;
 border-right: none;
@@ -55,15 +62,18 @@ border-radius: 5px;
 }
 
 mat-sidenav-container{
-  height: calc(100vh - 65px);
+  background-color: #F1F2F6;
+  display: flex;
 }
+.mat-drawer-inner-container {
 
+}
 .content {
     width: 800px;
-    height: 800px;
     border-radius: 10px;
     margin: 16px;
     margin-left: 32px;
+
 
 }
 
@@ -132,4 +142,54 @@ mat-divider {
 .far {
   color: #6F1E51E5;
 
+}
+mat-sidenav-content{
+  width:100%;
+
+
+}
+.card{
+  margin: 15px;
+}
+.card-header{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card-header h2{
+  color: #6F1E51;
+  padding: 15px;
+}
+.card-body{
+  color: #6F1E51;
+  padding-left: 40px;
+}
+.bg{
+  background-color: #6F1E51;
+  border-radius: 5px 5px 0 0;
+
+}
+
+.text{
+  color: white;
+}
+#footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+              /* Footer height */
+}
+.col-md-4{
+  color: darkgray;
+}
+
+a{
+  color:darkgrey ;
+}
+
+#linha-horizontal {
+  width: auto;
+  border: 1px solid #1289A7;
+  border-radius: 5px 5px 0 0;
+  padding: 5px;
 }
