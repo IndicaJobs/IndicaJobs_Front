@@ -1,65 +1,57 @@
-import { HttpClientModule } from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http'
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { OrderModule } from 'ngx-order-pipe';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 import { AppRoutingModule } from './app-routing.module';
-import { MatToolbarModule} from '@angular/material/toolbar'
-import { MatSidenavModule} from '@angular/material/sidenav'
-import { MatButtonModule} from '@angular/material/button'
-import { MatIconModule} from '@angular/material/icon'
-import { MatDividerModule} from '@angular/material/divider'
-
-
 import { AppComponent } from './app.component';
-import { LoginCadastroComponent } from './login-cadastro/login-cadastro.component';
-import { RodapeComponent } from './rodape/rodape.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { AlertaComponent } from './alerta/alerta.component';
 import { BemVindoComponent } from './bem-vindo/bem-vindo.component';
-import { EsqueceuSenhaComponent } from './esqueceu-senha/esqueceu-senha.component';
-import { InicioComponent } from './inicio/inicio.component';
-import { TemaComponent } from './tema/tema.component';
-import { PostagensComponent } from './postagens/postagens.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
-import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
-import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
+import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
-
+import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
+import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { LoginCadastrarComponent } from './login-cadastrar/login-cadastrar.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { PostagensComponent } from './postagens/postagens.component';
+import { RodapeComponent } from './rodape/rodape.component';
+import { TemaComponent } from './tema/tema.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-
-    LoginCadastroComponent,
-    RodapeComponent,
-    NavBarComponent,
+    AlertaComponent,
     BemVindoComponent,
-    EsqueceuSenhaComponent,
-    InicioComponent,
-    TemaComponent,
-    PostagensComponent,
-    TemaEditComponent,
     PostagemEditComponent,
-    TemaDeleteComponent,
+    TemaEditComponent,
+    UsuarioEditComponent,
     PostagemDeleteComponent,
-    UsuarioEditComponent
+    TemaDeleteComponent,
+    InicioComponent,
+    LoginCadastrarComponent,
+    NavBarComponent,
+    PostagensComponent,
+    RodapeComponent,
+    TemaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatButtonModule,
-    MatIconModule,
-    MatDividerModule,
+    ModalModule.forRoot(),
+    OrderModule
   ],
-
-  providers: [],
-  bootstrap: [AppComponent],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy
+  }],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

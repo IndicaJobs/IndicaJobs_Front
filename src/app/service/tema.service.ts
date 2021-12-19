@@ -9,8 +9,9 @@ import { Tema } from '../model/Tema';
 })
 export class TemaService {
 
-
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
   token ={
     headers : new HttpHeaders().set('Authorization',environment.token)
@@ -26,6 +27,10 @@ export class TemaService {
     return this.http.get<Tema>(`https://indicajobs.herokuapp.com/temas/${idTema}`, this.token)
   }
 
+  getByTituloTema(tituloTema: string): Observable<Tema[]>{
+    return this.http.get<Tema[]>(`https://indicajobs.herokuapp.com/temas/tituloTema/${tituloTema}`, this.token)
+  }
+
   putTema(tema: Tema): Observable<Tema>{
     return this.http.put<Tema>('https://indicajobs.herokuapp.com/temas', tema, this.token)
   }
@@ -33,6 +38,4 @@ export class TemaService {
   deleteTema(idTema: number) {
     return this.http.delete(`https://indicajobs.herokuapp.com/temas/${idTema}`, this.token)
   }
-
-
 }

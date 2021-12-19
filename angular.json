@@ -1,12 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "99b23b9d-f4fd-4e45-b444-5e43fd06b517"
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "indica-jobs-front": {
+    "IndicaJobs": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/indica-jobs-front",
+            "outputPath": "dist/IndicaJobs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -30,7 +27,6 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
@@ -77,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "indica-jobs-front:build:production"
+              "browserTarget": "IndicaJobs:build:production"
             },
             "development": {
-              "browserTarget": "indica-jobs-front:build:development"
+              "browserTarget": "IndicaJobs:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -88,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "indica-jobs-front:build"
+            "browserTarget": "IndicaJobs:build"
           }
         },
         "test": {
@@ -103,7 +99,6 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -112,5 +107,5 @@
       }
     }
   },
-  "defaultProject": "indica-jobs-front"
+  "defaultProject": "IndicaJobs"
 }

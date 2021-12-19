@@ -1,5 +1,5 @@
-import { AuthService } from './service/auth.service';
 import { Component } from '@angular/core';
+import { AuthService } from './service/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'indica-jobs-front';
+  
+  constructor(
+    public auth: AuthService
+  ){}
 
-  constructor(public auth: AuthService){
-
-  }
 }

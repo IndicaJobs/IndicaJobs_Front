@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'indica-jobs-front'`, () => {
+  it(`should have as title 'IndicaJobs'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('indica-jobs-front');
+    expect(app.title).toEqual('IndicaJobs');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('indica-jobs-front app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('IndicaJobs app is running!');
   });
 });

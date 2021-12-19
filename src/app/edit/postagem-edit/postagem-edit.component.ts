@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Postagem } from 'src/app/model/Postagem';
 import { Tema } from 'src/app/model/Tema';
+import { AlertasService } from 'src/app/service/alertas.service';
 import { PostagemService } from 'src/app/service/postagem.service';
 import { TemaService } from 'src/app/service/tema.service';
 import { environment } from 'src/environments/environment.prod';
@@ -12,6 +13,7 @@ import { environment } from 'src/environments/environment.prod';
   styleUrls: ['./postagem-edit.component.css']
 })
 export class PostagemEditComponent implements OnInit {
+
   postagem: Postagem = new Postagem()
 
   tema: Tema = new Tema()
@@ -22,14 +24,15 @@ export class PostagemEditComponent implements OnInit {
     private postService: PostagemService,
     private temaService: TemaService,
     private router: Router,
-    private route : ActivatedRoute
+    private route : ActivatedRoute,
+    private alerta: AlertasService
   ) { }
 
   ngOnInit() {
     window.scroll(0,0)
     
     if(environment.token == ''){
-      this.router.navigate(['/entrar'])
+      this.router.navigate(['/login-cadastrar'])
     }
 
     let idPost = this.route.snapshot.params['idPost']
@@ -61,9 +64,9 @@ export class PostagemEditComponent implements OnInit {
 
     this.postService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
-      alert('Postagem atualizada com sucesso!')
+      this.alerta.showAlertSuccess('Postagem atualizada com sucesso!')
       this.router.navigate(['/inicio'])
     })
-  }
+  }  
 
 }

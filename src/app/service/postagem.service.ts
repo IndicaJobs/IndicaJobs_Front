@@ -1,7 +1,7 @@
-import { Observable } from 'rxjs';
-import { environment } from './../../environments/environment.prod';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 
 @Injectable({
@@ -9,7 +9,9 @@ import { Postagem } from '../model/Postagem';
 })
 export class PostagemService {
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
   token = {
     headers: new HttpHeaders().set('Authorization', environment.token)
@@ -23,6 +25,10 @@ export class PostagemService {
     return this.http.get<Postagem>(`https://indicajobs.herokuapp.com/postagens/${idPost}`, this.token)
   }
 
+  getByTituloPostagem(titulo: string): Observable<Postagem[]>{
+    return this.http.get<Postagem[]>(`https://indicajobs.herokuapp.com/postagens/titulo/${titulo}`, this.token)
+  }
+  
   postPostagem(postagem: Postagem): Observable<Postagem> {
     return this.http.post<Postagem>('https://indicajobs.herokuapp.com/postagens', postagem, this.token)
   }
@@ -34,6 +40,4 @@ export class PostagemService {
   deletePostagem(idPost: number) {
     return this.http.delete(`https://indicajobs.herokuapp.com/postagens/${idPost}`, this.token)
   }
-
 }
-

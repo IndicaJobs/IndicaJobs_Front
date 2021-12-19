@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/indica-jobs-front'),
+      dir: require('path').join(__dirname, './coverage/IndicaJobs'),
       subdir: '.',
       reporters: [
         { type: 'html' },
