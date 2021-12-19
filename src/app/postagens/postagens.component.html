@@ -1,22 +1,117 @@
-<div class="tab-content mt-5" id="nav-tabContent">
+<body>
+  <div class="fundo">
+    <div class="container-fluid">
+      <button class="btn" mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">
+          menu
+        </mat-icon>
+        <mat-icon *ngIf="sidenav.opened">
+          close
+        </mat-icon>
+      </button>
 
-  <div class="tab-pane fade show active" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">
+
+      <mat-sidenav #sidenav="matSidenav" class="mat mat-elevation-z8 mt-4" mode="side" opened>
+
+        <div class="col-md-12" id="cardAzul"></div>
 
 
-    <div class="card-columns">
-      <div class="card text-center" *ngFor='let item of usuario.postagem'>
-        <div class="card-body">
-          <h5 class="card-title m-0">{{item.tituloPost}}</h5>
-          <small class="text-muted"> Tema: {{item.tema.tituloTema}}</small>
-          <p class="card-text mt-3">{{item.textoPost}}</p>
-          <p class="card-text"><small class="text-muted">
-              {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}
-            </small></p>
+        <img class="avatar mat-elevation-z8" src="{{foto}}" />
 
-          <a [routerLink]="['/postagem-edit', item.idPost]" class="text-info mr-3" href="">Editar</a>
-          <a [routerLink]="['/postagem-delete', item.idPost]" class="text-danger" href="">Apagar</a>
+        <h4 class="name txt2">{{nome}}</h4>
+
+
+        <p class="designation txt2">Bio:</p>
+        <mat-divider></mat-divider>
+
+
+
+        <p class="menu-button txt2">
+          <mat-icon class="txt2">star_border</mat-icon>
+          <span class="txt2">Pontos por Indicação</span>
+        </p>
+        <p class="menu-button txt2">
+          <mat-icon class="txt2">work</mat-icon>
+          <span class="txt2">Empresa</span>
+        </p>
+        <p class="menu-button txt2">
+          <mat-icon class="txt2">calendar_today</mat-icon>
+          <span class="txt2">Nascimento</span>
+        </p>
+        <p class="menu-button txt2">
+          <mat-icon class="txt2"> location_on</mat-icon>
+          <span class="txt2">São Paulo</span>
+        </p>
+
+      </mat-sidenav>
+
+      <div class="content">
+
+        <div class="card tab-pane fade show active mat-elevation-z8" id="todasPostagens" role="tabpanel"
+          aria-labelledby="nav-todasPostagens-tab"  *ngFor="let item of usuario.postagem| orderBy : key : reverse">
+          <div class="card-header">
+            <div class="foto-Usuario">
+              <img class="img-fluid rounded-circle mb-0" src="{{foto}}" alt="" height="80px" width="80px">
+            </div>
+            <div class="nome-Usuario">
+              <h2>{{nome}}</h2>
+            </div>
+          </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <h5 class="card-title m-0">{{item.tituloPost}}</h5>
+
+              {{item.textoPost}}
+              <footer class="blockquote-footer">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data
+                | date: 'HH:mm'}}. {{item.tema.tituloTema}}</footer>
+            </blockquote>
+            <a [routerLink]="['/postagem-edit', item.idPost]" class="text-info mr-3" href="">Editar</a>
+            <a [routerLink]="['/postagem-delete', item.idPost]" class="text-danger" href="">Apagar</a>
+          </div>
         </div>
+
       </div>
+
+
     </div>
 
+    <footer class="bg text-center text-lg-start" id="footer">
+
+      <div id="linha-horizontal">
+        <div class="container contact-box pt-2 d-flex justify-content-center">
+
+          <div class="col-md-4">
+            <i class="fab fa-github-alt mr-2 mb-3"></i>
+            <a href="https://github.com/IndicaJobs" target="_blank">Indica Job's</a>
+          </div>
+
+
+
+          <div class="col-md-4">
+            <i class="fas fa-at mr-2 mb-3"></i>
+            <a href="mailto:indicajobs35@gmail.com" target="_blank">E-mail</a>
+          </div>
+
+
+
+          <div class="col-md-4">
+            <i class="fas fa-map-marked-alt mr-2 mb-3"></i>
+            <a href="">São Paulo-SP</a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- Copyright -->
+      <div class="text pt-1" style="background-color: rgba(0, 0, 0, 0.2);">
+        <a class="text">Sobre nós: Indica Job's</a>
+      </div>
+      <div class="text p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Copyright:
+        <a class="text" href="brazil.generation.org">Generation Brasil</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
   </div>

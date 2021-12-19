@@ -1,39 +1,39 @@
 <div class="bg">
-    <div class="container-fluid">
-      <div class="row">
-  
-        <div class="col-md-12 mt-5 mb-5">
-          <h1 class="text-center fs-54">Apagar postagem</h1>
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-md-12 mt-5 mb-5">
+        <h1 class="text-center fs-54">Apagar postagem</h1>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-md-12">
+        <h4 class="text-center fs-18">Você tem certeza que deseja apagar essa postagem?</h4>
+      </div>
+    </div>
+
+    <div class="row mb-4 justify-content-center">
+      <div class="col-md-4 linha">
+       
+        <div class="card-body fs-12">
+          <blockquote class="blockquote mb-0">
+            <h5 class="card-title m-0 ">{{postagem.tituloPost}}</h5>
+
+            {{postagem.textoPost}}
+            <footer class="blockquote-footer fs-10"> {{postagem.data | date: 'dd/MM/yyyy'}} às {{postagem.data
+              | date: 'HH:mm'}}. {{postagem.tema.tituloTema}}</footer>
+          </blockquote>
         </div>
       </div>
-  
-      <div class="row mb-4">
-        <div class="col-md-12">
-          <h4 class="text-center fs-18">Você tem certeza que deseja apagar essa postagem?</h4>
-        </div>
       </div>
-  
-      <div class="row mb-4 justify-content-center">
-        <div class="col-md-4">
-          <div class="card text-center">
-            <div class="card-body linha">
-              <h5 class="card-title fs-12 m-0">{{postagem.tituloPost}}</h5>
-              <small class="text f-12">Tema: {{postagem.tema.descricaoTema}}</small>
-              <p class="card-text fs-10 mt-3">{{postagem.textoPost}}</p>
-              <p class="card-text "><small class="text f-12">
-                  {{postagem.data | date: 'dd/MM/yyyy'}} às {{postagem.data | date: 'HH:mm'}}
-                </small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-  
+
       <div class="row">
         <div class="col-md-12 d-flex justify-content-center mb-4">
           <button class="btn hr borda-b txt mr-4" routerLink='/inicio'>Não</button>
           <button class="btn hb borda-b txt" (click)='apagar()'>Sim</button>
         </div>
       </div>
-  
+
     </div>
   </div>

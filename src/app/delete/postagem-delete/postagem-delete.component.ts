@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Postagem } from 'src/app/model/Postagem';
+import { Usuario } from 'src/app/model/Usuario';
 import { AlertasService } from 'src/app/service/alertas.service';
 import { PostagemService } from 'src/app/service/postagem.service';
 import { environment } from 'src/environments/environment.prod';
@@ -14,6 +15,9 @@ export class PostagemDeleteComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
   idPost: number
+
+  usuario: Usuario = new Usuario()
+  idUsuario: number
 
   constructor(
     private router: Router,

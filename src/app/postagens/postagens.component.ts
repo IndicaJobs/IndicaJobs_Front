@@ -18,6 +18,7 @@ export class PostagensComponent implements OnInit {
 
   nome = environment.nome;
   foto = environment.foto;
+  
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
   tituloPost: string
