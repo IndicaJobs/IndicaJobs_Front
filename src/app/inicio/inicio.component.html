@@ -1,91 +1,170 @@
-<div class="bg">
-<div class="tab-content" id="nav-tabContent">
+<body>
+  <div class="fundo">
+    <div class="container-fluid">
+      <button class="btn" mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">
+          menu
+        </mat-icon>
+        <mat-icon *ngIf="sidenav.opened">
+          close
+        </mat-icon>
+      </button>
 
-  <div class="row">
-    <div class="button col-md-12">
-      <button id="line" class="btn-Post" data-target="#novaPostagem" data-toggle="modal" type="button"><i
-          class="far fa-paper-plane"></i></button>
+
+      <mat-sidenav #sidenav="matSidenav" class="mat mat-elevation-z8 mt-3" mode="side" opened>
+
+        <div class="col-md-12" id="cardAzul"></div>
+
+
+        <img class="avatar mat-elevation-z8" src="{{foto}}" />
+
+        <h4 class="name txt2">{{nome}}</h4>
+
+
+        <p class="designation txt2">Bio:</p>
+        <mat-divider></mat-divider>
+
+
+
+        <p class="menu-button txt2">
+          <mat-icon class="txt2">star_border</mat-icon>
+          <span class="txt2">Pontos por Indicação</span>
+        </p>
+        <p class="menu-button txt2">
+          <mat-icon class="txt2">work</mat-icon>
+          <span class="txt2">Empresa</span>
+        </p>
+        <p class="menu-button txt2">
+          <mat-icon class="txt2">calendar_today</mat-icon>
+          <span class="txt2">Nascimento</span>
+        </p>
+        <p class="menu-button txt2">
+          <mat-icon class="txt2"> location_on</mat-icon>
+          <span class="txt2">São Paulo</span>
+        </p>
+
+      </mat-sidenav>
+
+      <div class="content">
+        <div class="row">
+          <div class="button col-md-12">
+            <button id="line" class="btn-Post" data-target="#novaPostagem" data-toggle="modal" type="button"><i
+                class="far fa-paper-plane"></i></button>
+          </div>
+        </div>
+        <div class="card tab-pane fade show active mat-elevation-z8" id="todasPostagens" role="tabpanel"
+          aria-labelledby="nav-todasPostagens-tab" *ngFor="let item of listaPostagens">
+          <div class="card-header">
+            <div class="foto-Usuario">
+              <img class="img-fluid rounded-circle mb-0" src="{{item.usuario.foto}}" alt="" height="80px" width="80px">
+            </div>
+            <div class="nome-Usuario">
+              <h2>{{item.usuario.nome}}</h2>
+            </div>
+          </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <h5 class="card-title m-0">{{item.tituloPost}}</h5>
+
+              {{item.textoPost}}
+              <footer class="blockquote-footer">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data
+                | date: 'HH:mm'}}. {{item.tema.descricaoTema}}.</footer>
+            </blockquote>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <footer class="bg text-center text-lg-start" id="footer">
+
+      <div id="linha-horizontal">
+        <div class="container contact-box pt-2 d-flex justify-content-center">
+
+          <div class="col-md-4">
+            <i class="fab fa-github-alt mr-2 mb-3"></i>
+            <a href="https://github.com/IndicaJobs" target="_blank">Indica Job's</a>
+          </div>
+
+
+
+          <div class="col-md-4">
+            <i class="fas fa-at mr-2 mb-3"></i>
+            <a href="mailto:indicajobs35@gmail.com" target="_blank">E-mail</a>
+          </div>
+
+
+
+          <div class="col-md-4">
+            <i class="fas fa-map-marked-alt mr-2 mb-3"></i>
+            <a href="">São Paulo-SP</a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- Copyright -->
+      <div class="text pt-1" style="background-color: rgba(0, 0, 0, 0.2);">
+        <a class="text">Sobre nós: Indica Job's</a>
+      </div>
+      <div class="text p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Copyright:
+        <a class="text" href="brazil.generation.org">Generation Brasil</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </div>
+  <!-- Modal -->
+
+  <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+      <div class="modal-content borda">
+
+        <div class="modal-header">
+
+          <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
+          <button type="button" data-target="novaPostagem" data-toggle="modal" class="close" data-dismiss="modal"
+            aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body borda-2">
+          <div class="form-group txt">
+            <label for="titulo">Título:</label>
+            <input [(ngModel)]="postagem.tituloPost" type="text" class="form-control borda" id="titulo"
+              placeholder="Digite o título">
+          </div>
+
+          <div class="form-group txt">
+            <label for="texto">Texto:</label>
+            <textarea [(ngModel)]="postagem.textoPost" name="texto" id="texto" rows="3" class="form-control borda"
+              placeholder="Digite sua mensagem"></textarea>
+          </div>
+
+          <div class="form-group txt">
+            <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink="/tema">cadastre um
+                novo</a>:</label>
+            <select [(ngModel)]="idTema" name="tema" id="tema" class="form-control borda" (change)="findByIdTema">
+              <option *ngFor="let item of listaTemas" value="{{item.idTema}}">
+                {{item.tituloTema}}
+              </option>
+            </select>
+          </div>
+
+        </div>
+        <div class="modal-footer txt">
+          <button type="button" class="btn hr borda-b txt  mr-4" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn hb borda-b txt" (click)="publicar()" data-dismiss="modal">Publicar</button>
+        </div>
+      </div>
     </div>
   </div>
-
-  <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="nav-todasPostagens-tab">
-
-
-    <div class="row d-flex justify-content-center mt-5 mb5">
-      <div class="col-md-4">
-        <div class="form-group">
-          <input type="text" class="form-control borda" id="titulo"
-            placeholder="Digite um titulo de postagem para pesquisar" [(ngModel)]="tituloPost"
-            (keyup)="findByTituloPostagem()">
-        </div>
-      </div>
-
-    </div>
-
-    <div class="card-columns">
-      <div class="card text-center" *ngFor="let item of listaPostagens | orderBy : key : reverse">
-        <div class="card-body">
-          <h5 class="card-title m-0">{{item.tituloPost}}</h5>
-          <small class="text-muted">Tema: {{item.tema.tituloTema}}</small>
-          <p class="card-text mt-3">{{item.textoPost}}</p>
-          <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data
-              | date: 'HH:mm'}}</small></p>
-          <p class="card-text"><small class="text-muted"> by: {{item.usuario.nome}}</small></p>
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-</div>
-</div>
-
-
-<!-- Modal -->
-<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
-  aria-hidden="true">
-
-  <div class="modal-dialog modal-dialog-centered" role="document">
-
-    <div class="modal-content borda bg">
-
-      <div class="modal-header ">
-
-        <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
-        <button type="button" data-target="novaPostagem" data-toggle="modal" class="close" data-dismiss="modal"
-          aria-label="Fechar">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-
-      <div class="modal-body borda-2">
-        <div class="form-group txt">
-          <label for="titulo">Título:</label>
-          <input [(ngModel)]="postagem.tituloPost" type="text" class="form-control borda" id="titulo"
-            placeholder="Digite o título">
-        </div>
-
-        <div class="form-group txt">
-          <label for="texto">Texto:</label>
-          <textarea [(ngModel)]="postagem.textoPost" name="texto" id="texto" rows="3" class="form-control borda"
-            placeholder="Digite sua mensagem"></textarea>
-        </div>
-
-        <div class="form-group txt">
-          <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink="/tema">cadastre um
-              novo</a>:</label>
-          <select [(ngModel)]="idTema" name="tema" id="tema" class="form-control borda" (change)="findByIdTema">
-            <option *ngFor="let item of listaTemas" value="{{item.idTema}}">
-              {{item.tituloTema}}
-            </option>
-          </select>
-        </div>
-
-      </div>
-      <div class="modal-footer txt">
-        <button type="button" class="btn hr borda-b txt  mr-4" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn hb borda-b txt" (click)="publicar()" data-dismiss="modal">Publicar</button>
-      </div>
-    </div>
-  </div>
-</div>
+</body>

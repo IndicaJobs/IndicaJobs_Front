@@ -21,6 +21,12 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { PostagensComponent } from './postagens/postagens.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { TemaComponent } from './tema/tema.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule} from '@angular/material/toolbar'
+import { MatSidenavModule} from '@angular/material/sidenav'
+import { MatButtonModule} from '@angular/material/button'
+import { MatIconModule} from '@angular/material/icon'
+import { MatDividerModule} from '@angular/material/divider'
 
 
 @NgModule({
@@ -46,7 +52,13 @@ import { TemaComponent } from './tema/tema.component';
     HttpClientModule,
     FormsModule,
     ModalModule.forRoot(),
-    OrderModule
+    OrderModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDividerModule
   ],
   providers: [{
     provide: LocationStrategy,

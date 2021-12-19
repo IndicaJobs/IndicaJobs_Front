@@ -1,24 +1,28 @@
 <!--NavBar-->
 <nav class="navbar navbar-icon-top navbar-expand-lg navbar-light bg-light" id="linha-horizontal">
-  <div class="container-fluid d-flex">
-    <a class="navbar-brand" href="#"><img src="../../assets/img/logo-nav-bar.png" alt="" width="180"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <div class="container">
+    <img src="../../assets/img/logo-nav-bar.png" alt="" width="180">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <div class="col-md-6">
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#text-Sobre">Sobre Nós</a>
           </li>
 
-
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Equipe IndicaJob's</a>
+            <a class="nav-link active" aria-current="page" href="#porque">Por que IndicaJob's?</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contato">Contato</a>
+            <a class="nav-link active" aria-current="page" href="#equipe">Equipe IndicaJob's</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contato">Contato</a>
           </li>
         </ul>
       </div>
@@ -40,7 +44,7 @@
 
 <!--Bem-Vindo-->
 <div class="container-welcome">
-  <div class="row">
+  <div class="row d-flex align-items-center">
     <div class="col-md-6" id="welcome">
       <h1 id="titulo">Seja Bem Vinde ao IndicaJob's</h1>
       <p>A rede social que aproxima as Empresas dos Usuários por meio de Indicações!</p>
@@ -54,7 +58,7 @@
 
 <!--Sobre-Nós-->
 
-<div class="container-sobreNos"  id="sobre">
+<div class="container-sobreNos" id="sobre">
   <div class="row-texto">
     <div class="col-md-6" id="text-Sobre">
       <p>O IndicaJob's foi criado para ser apresentado como Projeto Final de grupo da Turma-35 do Curso Bootcamp para
@@ -72,7 +76,26 @@
 </div>
 
 
-<div class="container-tituloEquipe">
+<div class="container-porque" id="porque">
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-md-6">
+      <h1>Por que IndicaJobs's?</h1>
+
+    </div>
+    <div class="col-md-6">
+      <p>Cultivar uma boa rede de contatos (networking) é a estratégia mais eficiente para obter emprego. Uma pesquisa
+        realizada pelo Site de Empregos Catho, que ouviu mais de 53.000 pessoas aponta que 54% dos entrevistados
+        chegaram ao atual posto de trabalho por meio de indicação. Além de ser uma das formas mais praticadas no mercado
+        de trabalho, as Empresas costumam valorizar, e muito, as referências. No entanto, essa é uma via de duas mãos, é
+        muito importante ter cuidado na hora de indicar alguém, pois a performance do indicado pode afetar diretamente
+        na reputação de quem indicou. É para agilizar e otimizar esse processo que o IndicaJob's foi criado!
+
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container-tituloEquipe" id="equipe">
   <div class="row ">
     <div class="col-md-12 d-flex justify-content-center tituloEquipe">
       <h1 class="text-center">A Equipe IndicaJob's:</h1>
@@ -87,19 +110,25 @@
       <div class="col-md-4 ml-4 d-flex justify-content-center img-equipe">
         <figure>
           <img class="img-fluid rounded-circle m-5" src="../../assets/img/Bruno.jpg" alt="">
-          <figcaption class="text-center"> Your text </figcaption>
+          <figcaption class="text-center">Bruno Foschini Pajtak
+            <p>Desenvolvedor</p>
+          </figcaption>
         </figure>
       </div>
       <div class="col-md-4 d-flex justify-content-center">
         <figure>
           <img class="img-fluid rounded-circle m-5" src="../../assets/img/Dri.jpeg" alt="">
-          <figcaption class="text-center">Drislaine Faro</figcaption>
+          <figcaption class="text-center">Drislaine Faro
+            <p>Desenvolvedora</p>
+          </figcaption>
         </figure>
       </div>
       <div class="col-md-4 d-flex justify-content-center img-equipe">
         <figure>
           <img class="img-fluid rounded-circle m-5" src="../../assets/img/Carol.jpg" alt="" height="">
-          <figcaption class="text-center">Kathleen Caroline</figcaption>
+          <figcaption class="text-center">Kathleen Caroline
+            <p>Desenvolvedora</p>
+          </figcaption>
         </figure>
       </div>
     </div>
@@ -112,20 +141,23 @@
     <div class="col-md-12 d-flex justify-content-center equipe">
       <figure>
         <img class="img-fluid rounded-circle m-5" src="../../assets/img/Robson.jpeg" alt="">
-        <figcaption class="text-center">Robson Coura</figcaption>
+        <figcaption class="text-center">Robson Coura
+          <p>Desenvolvedor</p>
+        </figcaption>
       </figure>
       <figure>
         <img class="img-fluid rounded-circle m-5" src="../../assets/img/Thais.jpg" alt="">
-        <figcaption class="text-center">Thaís Pereira</figcaption>
+        <figcaption class="text-center">Thaís Pereira
+          <p>Desenvolvedora</p>
+        </figcaption>
       </figure>
     </div>
 
   </div>
 </div>
 
-
 <!--Footer-->
-<footer class="bg text-center text-lg-start">
+<footer id="contato" class="bg text-center text-lg-start">
 
   <div id="linha-horizontal">
     <div class="container contact-box pt-2 d-flex justify-content-center">

@@ -1,89 +1,185 @@
-  .borda{
-    border: 1px solid #1289A7;
-    background-color: #F1F2F6;
-    box-sizing: border-box;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-  }
-  
-  .borda-2{
-    border-top: 1px solid #1289A7;
-    border-bottom: 1px solid #1289A7;
-  }
-  
-  .borda-b{
-    border: 1px solid #6F1E51;
-    background-color: #F1F2F6;
-    box-sizing: border-box;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-  }
-  
-  .modal-title{
-    color: #6F1E51;
-    font-size: 20pt; 
-  }
-  
-  .txt{
-    color: #6F1E51;
-    font-size: 12pt;
-  }
-  
-  .hb:hover{
-    background-color: #1289A7;
-    color: #ffffff ;
-  }
-  
-  .hr:hover{
-    background-color: crimson;
-    color: #ffffff;
-  }  
-  
-  .content {
-      width: 800px;
-      height: 800px;
-      border-radius: 10px;
-      margin: 16px;
-      margin-left: 32px;
-  
-  }
-  
-  #linhaVertical {
-    width: auto;
-    height: 100px;
-    background: #1289A7;
-    box-sizing: border-box;
-  
-  }  
-  .button{
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-  }
-  
-  .btn-Post{
-    border-radius: 5px;
-    display: flex;
-    flex-direction: end;    
-    width: 500px;
-    height: 40px;
-    border-top: 5px solid #1289A7;
-    border-left: 1px solid #6F1E51E5;
-    border-right: 1px solid #6F1E51E5;
-    border-bottom: 1px solid #6F1E51E5;
-    box-sizing: border-box;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-  }
+.fundo{
+  background-color: #F1F2F6;
 
-  .btn-Post:hover{
-    background-color: #6F1E51;
-    color: #1289A7;
-  }
-  
-  .far {
-    color: #6F1E51E5;
+}
+.container-fluid{
+  display: flex;
+  justify-content: center;
 
-  }
+}
+.borda{
+  border: 1px solid #1289A7;
+  background-color: #F1F2F6;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
 
-  .bg{
-    background-color: #F1F2F6;
-  }
+.borda-2{
+  border-top: 1px solid #1289A7;
+  border-bottom: 1px solid #1289A7;
+}
 
+.borda-b{
+  border: 1px solid #6F1E51;
+  background-color: #F1F2F6;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.modal-title{
+  color: #6F1E51;
+  font-size: 20pt;
+  padding-top: 10px;
+}
+
+.txt{
+  color: #6F1E51;
+  font-size: 12pt;
+}
+
+.hb:hover{
+  background-color: #1289A7;
+  color: #ffffff ;
+}
+
+.hr:hover{
+  background-color: crimson;
+  color: #ffffff;
+}
+
+.mat {
+  width: 280px;
+  height: 600px;
+  text-align: center;
+  font: Roboto;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.txt2{
+  color: #6F1E51;
+  background-color: #ffffff;
+  margin-left: 10px;
+}
+
+
+.content {
+    width: 800px;
+    border-radius: 10px;
+    margin: 16px;
+    margin-left: 32px;
+
+
+}
+
+#cardAzul {
+  width: 100%;
+  height: 120px;
+  background: #1289A7;
+  background-repeat: repeat;
+  border-radius: 5px 5px 0 0;
+}
+
+.menu-button { 
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+mat-icon {
+      margin-right: 8px;
+  }
+.avatar {
+  position:relative;
+  margin: -80px 0px 0px 0px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.name {
+  margin-top: 8px;
+  font-weight: normal;
+}
+
+.designation {
+  margin-top: 2px;
+  font-size: 25px;
+  color: #6F1E51;
+  text-align: start;
+  padding-left: 20px;
+}
+
+mat-divider {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+}
+
+.btn-Post{
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-end;
+  width: 700px;
+  height: 40px;
+  border-top: 5px solid #1289A7;
+  border-left: 1px solid #6F1E51E5;
+  border-right: 1px solid #6F1E51E5;
+  border-bottom: 1px solid #6F1E51E5;
+  box-sizing: border-box;
+}
+
+.far {
+  color: #6F1E51E5;
+
+}
+
+
+.card{
+  margin: 15px;
+}
+.card-header{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card-header h2{
+  color: #6F1E51;
+  padding: 15px;
+}
+.card-body{
+  color: #6F1E51;
+  padding-left: 40px;
+}
+.bg{
+  background-color: #6F1E51;
+  border-radius: 5px 5px 0 0;
+
+}
+
+.text{
+  color: white;
+}
+#footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+              /* Footer height */
+}
+.col-md-4{
+  color: darkgray;
+}
+
+a{
+  color:darkgrey ;
+}
+
+#linha-horizontal {
+  width: auto;
+  border: 1px solid #1289A7;
+  border-radius: 5px 5px 0 0;
+  padding: 5px;
+}
