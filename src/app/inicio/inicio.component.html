@@ -48,8 +48,9 @@
       <div class="content">
         <div class="row">
           <div class="button col-md-12">
-            <button id="line" class="btn-Post" data-target="#novaPostagem" data-toggle="modal" type="button"><i
-                class="far fa-paper-plane"></i></button>
+            <button id="line" class="btn-Post" data-target="#novaPostagem" data-toggle="modal" type="button">
+              <div class="col-md-6 d-flex justify-content-start txt">Faça sua postagem...</div> <div class="col-md-6 d-flex justify-content-end"><i
+                class="far fa-paper-plane"></i></div> </button>
           </div>
         </div>
         <div class="card tab-pane fade show active mat-elevation-z8" id="todasPostagens" role="tabpanel"
@@ -150,7 +151,7 @@
           </div>
 
           <div class="form-group txt">
-            <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink="/tema">cadastre um
+            <label for="texto">Escolha um tema <a *ngIf="authService.adm()" data-dismiss="modal" routerLink="/tema">ou cadastre um
                 novo</a>:</label>
             <select [(ngModel)]="idTema" name="tema" id="tema" class="form-control borda" (change)="findByIdTema()">
               <option *ngFor="let item of listaTemas" value="{{item.idTema}}">
