@@ -68,7 +68,7 @@
 
               {{item.textoPost}}
               <footer class="blockquote-footer">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data
-                | date: 'HH:mm'}}. Tema: {{item.tema.descricaoTema}}</footer>
+                | date: 'HH:mm'}}. {{item.tema.tituloTema}}</footer>
             </blockquote>
           </div>
         </div>
@@ -152,7 +152,7 @@
           <div class="form-group txt">
             <label for="texto">Escolha um tema ou <a data-dismiss="modal" routerLink="/tema">cadastre um
                 novo</a>:</label>
-            <select [(ngModel)]="idTema" name="tema" id="tema" class="form-control borda" (change)="findByIdTema">
+            <select [(ngModel)]="idTema" name="tema" id="tema" class="form-control borda" (change)="findByIdTema()">
               <option *ngFor="let item of listaTemas" value="{{item.idTema}}">
                 {{item.tituloTema}}
               </option>

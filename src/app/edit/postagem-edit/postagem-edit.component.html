@@ -25,7 +25,7 @@
                     <label for="texto">Escolha um tema:</label>
                     <select [(ngModel)]="idTema" name="tema" id="tema" class="form-control borda" (change)="findByIdTema">
                         <option *ngFor="let item of listaTemas" value="{{item.idTema}}">
-                            {{item.descricaoTema}}
+                            {{item.tituloTema}}
                         </option>
                     </select>
                 </div>
