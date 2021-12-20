@@ -24,7 +24,8 @@ export class InicioComponent implements OnInit {
   listaTemas: Tema[]
   idTema: number
   tituloTema: string
-
+  nomeCriador: string
+  descricaoCriador: string
   usuario: Usuario = new Usuario()
   idUsuario = environment.idUsuario
 
@@ -39,7 +40,8 @@ export class InicioComponent implements OnInit {
     private postagemService: PostagemService,
     private temaService: TemaService,
     public authService: AuthService,
-    private alerta: AlertasService
+    private alerta: AlertasService,
+
   ) { }
 
   ngOnInit() {
@@ -80,7 +82,7 @@ export class InicioComponent implements OnInit {
   findByTituloPostagem() {
     if (this.tituloPost == '') {
       this.getAllPostagens
-      
+
     } else {
       this.postagemService.getByTituloPostagem(this.tituloPost).subscribe((resp: Postagem[]) => {
         this.listaPostagens = resp
@@ -91,14 +93,14 @@ export class InicioComponent implements OnInit {
   findByTituloTema(){
     if (this.tituloTema == '') {
       this.getAllTema
-      
+
     } else {
       this.temaService.getByTituloTema(this.tituloTema).subscribe((resp: Tema[]) => {
         this.listaTemas = resp
       })
     }
   }
-  
+
   publicar() {
     this.tema.idTema = this.idTema
     this.postagem.tema = this.tema
@@ -114,4 +116,6 @@ export class InicioComponent implements OnInit {
     })
 
   }
+
+
 }

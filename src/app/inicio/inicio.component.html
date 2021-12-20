@@ -56,10 +56,10 @@
           aria-labelledby="nav-todasPostagens-tab" *ngFor="let item of listaPostagens | orderBy : key : reverse">
           <div class="card-header">
             <div class="foto-Usuario">
-              <img class="img-fluid rounded-circle mb-0" src="{{foto}}" alt="" height="80px" width="80px">
+              <img class="img-fluid rounded-circle mb-0" src="{{item.usuario.foto}}" alt="" height="80px" width="80px">
             </div>
             <div class="nome-Usuario">
-              <h2>{{nome}}</h2>
+              <h2>{{item.usuario.nome}}</h2>
             </div>
           </div>
           <div class="card-body">
@@ -68,7 +68,7 @@
 
               {{item.textoPost}}
               <footer class="blockquote-footer">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data
-                | date: 'HH:mm'}}. {{item.tema.tituloTema}}</footer>
+                | date: 'HH:mm'}}. Tema: {{item.tema.descricaoTema}}</footer>
             </blockquote>
           </div>
         </div>
