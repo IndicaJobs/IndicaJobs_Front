@@ -1,4 +1,4 @@
-#  [Projeto Integrador - Indica Job´s](https://indicajobs.netlify.app/#/bem-vindo)
+#  <a href="https://indicajobs.netlify.app/#/bem-vindo" target="_blank">Projeto Integrador - Indica Job´s
 
 <h1 align="center">
    <a href="https://imgur.com/cnf9lLm"><img src="https://i.imgur.com/cnf9lLm.png" title="source: imgur.com" /></a>
