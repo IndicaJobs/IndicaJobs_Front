@@ -52,3 +52,36 @@
     box-sizing: border-box;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
   }
+
+  /*Rodape*/
+.bg{
+  background-color: #ffffff;
+  border-radius: 5px 5px 0 0;
+  
+}
+
+.text{
+  color: white;
+
+  font-size: 15px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.bg-footer{
+  background-color: #6F1E51;
+}
+
+
+.rodape{
+  color:#171515 ;
+  font-size: 18px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#linha-horizontal {
+  width: auto;
+  border: 1px solid #1289A7;
+  border-radius: 5px 5px 0 0;
+  padding: 5px;
+}
+/*final-rodape*/
