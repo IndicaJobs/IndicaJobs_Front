@@ -183,3 +183,9 @@
     border-radius: 5px 5px 0 0;
     padding: 5px;
   }
+
+  .postagens{
+    display: flex;
+    justify-content: right;
+    margin-right: 30px;
+  }

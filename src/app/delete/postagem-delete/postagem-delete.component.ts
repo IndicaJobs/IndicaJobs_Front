@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Postagem } from 'src/app/model/Postagem';
 import { Usuario } from 'src/app/model/Usuario';
-import { AlertasService } from 'src/app/service/alertas.service';
 import { PostagemService } from 'src/app/service/postagem.service';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-postagem-delete',
@@ -22,8 +22,7 @@ export class PostagemDeleteComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private postagemService: PostagemService,
-    private alerta: AlertasService
+    private postagemService: PostagemService
 
   ) { }
 
@@ -48,7 +47,13 @@ export class PostagemDeleteComponent implements OnInit {
 
   apagar(){
     this.postagemService.deletePostagem(this.idPost).subscribe(()=>{
-    this.alerta.showAlertSuccess('Postagem apagada com sucesso!')
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        text: 'Postagem apagada com sucesso!',
+        showConfirmButton: false,
+        timer: 3000
+      })
       this.router.navigate(['/inicio'])
     })
   }

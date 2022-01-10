@@ -10,22 +10,17 @@
 
 
 .container-welcome {
-  height: 640px;
+  height: 450px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 150px;
   border-bottom: 1px solid #1289A7;
   background-color: #F1F2F6;
-
 }
 .container-welcome h1{
-  padding-top: 100px;
-  font-weight: 600pt;
   font-size: 54px;
   text-align: center;
   line-height: 50px;
-  padding-top: 50px;
   color: #4e87a4;
   font-family: 'Montserrat Alternates', sans-serif;
 }
@@ -45,23 +40,6 @@
   justify-content: center;
 }
 
-.bg{
-  background-color: #6F1E51;
-  border-radius: 5px 5px 0 0;
-
-}
-
-.text{
-  color: white;
-}
-
-.col-md-4{
-  color: darkgray;
-}
-
-a{
-  color:darkgrey ;
-}
 
 #linha-horizontal {
   width: auto;
@@ -106,26 +84,25 @@ a{
   }
 
 }
+
 .container-sobreNos{
-  height: 600px;
+  height: 450px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
-  background-color: #FFFFFF;
-}
-#textSobre {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-
+  background-color: #F1F2F6;
+  
 }
 
 .container-sobreNos p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: justify;
   font-size: 24px;
   line-height: 30px;
   color: #6F1E51;
+  padding: 40px;
 }
 #sobre{
   display: flex;
@@ -157,8 +134,8 @@ a{
 
 
 figure img {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   margin: none;
   box-sizing: border-box;
   box-shadow: 10px 2px 5px 5px rgba(0, 0, 0, 0.25);
@@ -175,8 +152,8 @@ figure img {
 
 
 figure img {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   margin: none;
   box-sizing: border-box;
   box-shadow: 10px 2px 5px 5px rgba(0, 0, 0, 0.25);
@@ -197,7 +174,7 @@ figcaption{
 .container-porque{
   background-color: #F1F2F6;
 
-  height: 600px;
+  height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -221,3 +198,45 @@ figcaption{
 
 }
 /* /Configuração dos ícones */
+
+/*Rodape*/
+.bg{
+  background-color: #6F1E51;
+  border-radius: 5px 5px 0 0;
+  
+}
+
+.text{
+  color: white;
+  font-size: 15px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+
+.rodape{
+  color:#171515 ;
+  font-size: 18px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#linha-horizontal {
+  width: auto;   
+  border: 1px solid #1289A7;
+  padding: 5px;
+}
+
+.fa-linkedin{
+
+  color: #0072b1;
+  font-size: 25px;
+}
+
+.fa-github-square{
+  color: #171515;
+  font-size: 25px;
+}
+
+.subtitle{
+  color: #1289A7;
+  font-size: 15px;
+}
