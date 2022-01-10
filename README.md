@@ -25,7 +25,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-=======
+
 #  Projeto Integrador - Indica Job´s 
 
 <h1 align="center">
@@ -39,7 +39,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 O IndicaJob's foi criado para ser apresentado como Projeto Final de grupo da Turma-35 do Curso Bootcamp para Desenvolvedores Web Full Stack Java da ONG Generation Brasil.
 O projeto tem o intuito de apresentar soluções tecnológicas para alcançar o objetivo da ODS 8 da ONU: Trabalho Decente e Crescimento Ecônomico. A idéia por trás do Projeto é criar uma rede social que consiga unir Empresas que possuam vagas e usuários que possam ser indicados ou que indiquem outros usuários para essas vagas, por meio de postagens.
 
----
+
 
 ## ⚙️ Funcionalidades
 Perfil de Administrador:
