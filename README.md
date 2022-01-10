@@ -28,9 +28,10 @@ Perfil de Administrador:
 💜 Um agradecimento especial para os colaboradores deste projeto!! 👏 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/Pajtak"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/91138134?v=4" width="100px;" alt=""/><br /><sub><b>Bruno Foschini Pajtak</b></sub></a><br /><a href="https://github.com/Pajtak" title="GitHub Bruno">👨‍🚀</a></td> <td align="center"><a href="https://github.com/drifaro"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/54925297?v=4" width="100px;" alt=""/><br /><sub><b>Drislaine Faro</b></sub></a><br /><a href="https://github.com/drifaro" title="GitHub Dri">👨‍🚀</a></td><td align="center"><a href="https://github.com/almostcarol"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/88368798?v=4" width="100px;" alt=""/><br /><sub><b>Kathleen Caroline</b></sub></a><br /><a href="https://github.com/almostcarol" title="GitHub Carol">🚀</a></td><td align="center"><a href="https://github.com/RobsonCoura"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/87398376?v=4" width="100px;" alt=""/><br /><sub><b>Robson Coura</b></sub></a><br /><a href="https://github.com/RobsonCoura" title="GitHub Robson">🚀</a></td> <td align="center"><a href="https://github.com/thaisspereira"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/90809507?v=4" width="100px;" alt=""/><br /><sub><b>Thais Pereira</b></sub></a><br /><a href="https://github.com/thaisspereira" title="GitHub Thais">🚀</a></td>
+<td align="center"><a href="https://github.com/Pajtak"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/91138134?v=4" width="100px;" alt=""/><br /><sub><b>Bruno Foschini Pajtak</b></sub></a><br /><a href="https://github.com/Pajtak" title="GitHub Bruno">👨‍🚀</a></td> <td align="center"><a href="https://github.com/drifaro"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/54925297?v=4" width="100px;" alt=""/><br /><sub><b>Drislaine Faro</b></sub></a><br /><a href="https://github.com/drifaro" title="GitHub Dri">👨‍🚀</a></td><td align="center"><a href="https://github.com/almostcarol"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/88368798?v=4" width="100px;" alt=""/><br /><sub><b>Kathleen Caroline</b></sub></a><br /><a href="https://github.com/almostcarol" title="GitHub Carol">🚀</a></td><td align="center"><a href="https://github.com/RobsonCoura"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/87398376?v=4" width="100px;" alt=""/><br /><sub><b>Robson Coura</b></sub></a><br /><a href="https://github.com/RobsonCoura" title="GitHub Robson">🚀</a></td> <td align="center"><a href="https://github.com/thaisspereira"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/90809507?v=4" width="100px;" alt=""/><br /><sub><b>Thais Pereira</b></sub></a><br /><a href="https://github.com/thaisspereira" title="GitHub Thais">🚀</a></td>
     
   </tr>
+</table>
   
 # IndicaJobs
 
@@ -62,4 +63,3 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
  
-</table>
