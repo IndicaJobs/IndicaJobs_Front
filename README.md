@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # IndicaJobs
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
@@ -62,4 +61,3 @@ Perfil de Administrador:
   </tr>
  
 </table>
->>>>>>> c8b32b9b0c363c2645ba8b09e3913f86ced8d566
