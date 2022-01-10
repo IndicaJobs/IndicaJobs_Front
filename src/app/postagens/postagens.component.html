@@ -65,8 +65,10 @@
               <footer class="blockquote-footer">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data
                 | date: 'HH:mm'}}. {{item.tema.tituloTema}}</footer>
             </blockquote>
-            <a [routerLink]="['/postagem-edit', item.idPost]" class="text-info mr-3" href="">Editar</a>
-            <a [routerLink]="['/postagem-delete', item.idPost]" class="text-danger" href="">Apagar</a>
+            <div class="row postagens">
+            <a [routerLink]="['/postagem-edit', item.idPost]" class="text-info mr-3" href=""><i class="fas fa-edit"></i></a>
+            <a [routerLink]="['/postagem-delete', item.idPost]" class="text-danger" href=""><i class="fas fa-trash"></i></a>
+          </div>
           </div>
         </div>
 

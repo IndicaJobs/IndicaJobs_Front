@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 import { Tema } from '../model/Tema';
-import { AlertasService } from '../service/alertas.service';
 
 import { TemaService } from '../service/tema.service';
 
@@ -18,8 +18,7 @@ export class TemaComponent implements OnInit {
 
   constructor(
     private router:  Router,
-    private temaService: TemaService,
-    private alerta: AlertasService
+    private temaService: TemaService
   ) { }
 
   ngOnInit() {
@@ -28,7 +27,10 @@ export class TemaComponent implements OnInit {
     }
 
     if(environment.tipo != 'adm'){
-      this.alerta.showAlertInfo('Você precisa ser ADM para acessar essa rota!')
+      Swal.fire({
+        icon: 'info',
+        text: 'Você precisa ser Administrador para ter acesso a essa função!',
+      })
       this.router.navigate(['/inicio'])
     }
 
@@ -44,7 +46,13 @@ export class TemaComponent implements OnInit {
   cadastrar(){
     this.temaService.postTema(this.tema).subscribe((resp: Tema)=>{
       this.tema = resp
-      this.alerta.showAlertSuccess('Tema cadastrado com sucesso! ')
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        text: 'Tema cadastrado com sucesso!',
+        showConfirmButton: false,
+        timer: 3000
+      })
       this.findAllTemas()
       this.tema = new Tema()
     })

@@ -8,7 +8,6 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AlertaComponent } from './alerta/alerta.component';
 import { BemVindoComponent } from './bem-vindo/bem-vindo.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
@@ -32,7 +31,6 @@ import { MatDividerModule} from '@angular/material/divider'
 @NgModule({
   declarations: [
     AppComponent,
-    AlertaComponent,
     BemVindoComponent,
     PostagemEditComponent,
     TemaEditComponent,

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Usuario } from 'src/app/model/Usuario';
-import { AlertasService } from 'src/app/service/alertas.service';
 import { AuthService } from 'src/app/service/auth.service';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-usuario-edit',
@@ -22,7 +22,7 @@ export class UsuarioEditComponent implements OnInit {
     private authService: AuthService,
     private router: Router,
     private route: ActivatedRoute,
-    private alerta: AlertasService
+
 
   ) { }
 
@@ -54,7 +54,13 @@ export class UsuarioEditComponent implements OnInit {
       this.authService.putUsuario(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp
         this.router.navigate(['/login-cadastro'])
-        this.alerta.showAlertSuccess('Usuário atualizado com sucesso, faça o login novamente!')
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          text: 'Usuário atualizado com sucesso, faça o login novamente!',
+          showConfirmButton: false,
+          timer: 3000
+        })
 
         environment.token = ''
         environment.nome = ''

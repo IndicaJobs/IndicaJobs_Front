@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { Usuario } from '../model/Usuario';
-import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
@@ -39,8 +39,7 @@ export class InicioComponent implements OnInit {
     private router: Router,
     private postagemService: PostagemService,
     private temaService: TemaService,
-    public authService: AuthService,
-    private alerta: AlertasService,
+    public authService: AuthService
 
   ) { }
 
@@ -110,7 +109,13 @@ export class InicioComponent implements OnInit {
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
-      this.alerta.showAlertSuccess('Postagem realizada com sucesso!')
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        text: 'Postagem realizada com sucesso!',
+        showConfirmButton: false,
+        timer: 3000
+      })
       this.postagem = new Postagem()
       this.getAllPostagens()
     })

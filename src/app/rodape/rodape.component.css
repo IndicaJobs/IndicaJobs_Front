@@ -10,10 +10,14 @@
 
 .col-md-4{
     color: darkgray;
+    font-size: 30px;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 a{
     color:darkgrey ;
+    font-size: 30px;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 #linha-horizontal {

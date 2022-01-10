@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from './service/auth.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-root',
