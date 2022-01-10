@@ -18,7 +18,6 @@ import { InicioComponent } from './inicio/inicio.component';
 import { LoginCadastrarComponent } from './login-cadastrar/login-cadastrar.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { PostagensComponent } from './postagens/postagens.component';
-import { RodapeComponent } from './rodape/rodape.component';
 import { TemaComponent } from './tema/tema.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule} from '@angular/material/toolbar'
@@ -41,7 +40,6 @@ import { MatDividerModule} from '@angular/material/divider'
     LoginCadastrarComponent,
     NavBarComponent,
     PostagensComponent,
-    RodapeComponent,
     TemaComponent
   ],
   imports: [

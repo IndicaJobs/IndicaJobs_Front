@@ -189,3 +189,29 @@
     justify-content: right;
     margin-right: 30px;
   }
+
+  /*Rodape*/
+.bg{
+  background-color: #ffffff;
+  border-radius: 5px 5px 0 0;
+  
+}
+
+.text{
+  color: white;
+
+  font-size: 15px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.bg-footer{
+  background-color: #6F1E51;
+}
+
+
+.rodape{
+  color:#171515 ;
+  font-size: 18px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+/*final-rodape*/

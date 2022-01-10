@@ -49,8 +49,9 @@
         <div class="row">
           <div class="button col-md-12">
             <button id="line" class="btn-Post" data-target="#novaPostagem" data-toggle="modal" type="button">
-              <div class="col-md-6 d-flex justify-content-start txt">Faça sua postagem...</div> <div class="col-md-6 d-flex justify-content-end"><i
-                class="far fa-paper-plane"></i></div> </button>
+              <div class="col-md-6 d-flex justify-content-start txt">Faça sua postagem...</div>
+              <div class="col-md-6 d-flex justify-content-end"><i class="far fa-paper-plane"></i></div>
+            </button>
           </div>
         </div>
         <div class="card tab-pane fade show active mat-elevation-z8" id="todasPostagens" role="tabpanel"
@@ -79,28 +80,29 @@
 
     </div>
 
-    <footer class="bg text-center text-lg-start" id="footer">
+    <!--Footer-->
+    <footer id="contato" class="bg text-center text-lg-start">
 
       <div id="linha-horizontal">
         <div class="container contact-box pt-2 d-flex justify-content-center">
 
-          <div class="col-md-4">
-            <i class="fab fa-github-alt mr-2 mb-3"></i>
-            <a href="https://github.com/IndicaJobs" target="_blank">Indica Job's</a>
+          <div class="col-md-4 rodape">
+            
+            <a class="rodape" href="https://github.com/IndicaJobs" target="_blank"><i class="fab fa-github-alt mr-2 mb-3"></i>Indica Job's</a>
           </div>
 
 
 
-          <div class="col-md-4">
-            <i class="fas fa-at mr-2 mb-3"></i>
-            <a href="mailto:indicajobs35@gmail.com" target="_blank">E-mail</a>
+          <div class="col-md-4 rodape">
+            
+            <a class="rodape" href="mailto:indicajobs35@gmail.com" target="_blank"><i class="fas fa-at mr-2 mb-3"></i>E-mail</a>
           </div>
 
 
 
-          <div class="col-md-4">
-            <i class="fas fa-map-marked-alt mr-2 mb-3"></i>
-            <a href="">São Paulo-SP</a>
+          <div class="col-md-4 rodape">
+            
+            <a class="rodape" href=""><i class="fas fa-map-marked-alt mr-2 mb-3"></i>São Paulo-SP</a>
           </div>
         </div>
       </div>
@@ -109,16 +111,21 @@
 
 
       <!-- Copyright -->
+      <div class="bg-footer">
       <div class="text pt-1" style="background-color: rgba(0, 0, 0, 0.2);">
         <a class="text">Sobre nós: Indica Job's</a>
       </div>
-      <div class="text p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      <div class="text p-3 " style="background-color: rgba(0, 0, 0, 0.2);">
         © 2021 Copyright:
         <a class="text" href="brazil.generation.org">Generation Brasil</a>
       </div>
+    </div>
       <!-- Copyright -->
     </footer>
   </div>
+
+
+
   <!-- Modal -->
 
   <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
@@ -151,7 +158,8 @@
           </div>
 
           <div class="form-group txt">
-            <label for="texto">Escolha um tema <a *ngIf="authService.adm()" data-dismiss="modal" routerLink="/tema">ou cadastre um
+            <label for="texto">Escolha um tema <a *ngIf="authService.adm()" data-dismiss="modal" routerLink="/tema">ou
+                cadastre um
                 novo</a>:</label>
             <select [(ngModel)]="idTema" name="tema" id="tema" class="form-control borda" (change)="findByIdTema()">
               <option *ngFor="let item of listaTemas" value="{{item.idTema}}">

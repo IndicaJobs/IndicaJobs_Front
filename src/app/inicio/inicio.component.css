@@ -155,21 +155,33 @@ mat-divider {
   color: #6F1E51;
   padding-left: 40px;
 }
-.bg{
-  background-color: #6F1E51;
-  border-radius: 5px 5px 0 0;
 
+/*Rodape*/
+.bg{
+  background-color: #ffffff;
+  border-radius: 5px 5px 0 0;
+  
 }
 
 .text{
   color: white;
+
+  font-size: 15px;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
-#footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-              /* Footer height */
+
+.bg-footer{
+  background-color: #6F1E51;
 }
+
+
+.rodape{
+  color:#171515 ;
+  font-size: 18px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+/*final-rodape*/
+
 .col-md-4{
   color: darkgray;
 }
